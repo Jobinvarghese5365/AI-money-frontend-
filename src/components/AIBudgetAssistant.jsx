@@ -50,7 +50,7 @@ export default function AIBudgetAssistant({ budget }) {
     try {
       console.log('Sending request with budget:', getBudgetData());
 
-      const response = await fetch('https://ai-money-backend.vercel.app/api/ai/chat', {
+      const response = await fetch('http://localhost:5000/api/ai/chat', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

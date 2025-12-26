@@ -47,7 +47,7 @@ export default function Dashboard() {
   const fetchBudget = async () => {
     try {
       const res = await fetch(
-        `https://ai-money-backend.vercel.app/api/budget?month=${selectedMonth}&year=${selectedYear}`,
+        `http://localhost:5000/api/budget?month=${selectedMonth}&year=${selectedYear}`,
         {
           headers: { 'Authorization': `Bearer ${token}` }
         }

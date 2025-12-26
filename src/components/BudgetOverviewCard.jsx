@@ -204,7 +204,7 @@ export default function BudgetOverviewCard({
                 }
                 onBlur={async () => {
                   try {
-                    await fetch("https://ai-money-backend.vercel.app/api/budget", {
+                    await fetch("http://localhost:5000/api/budget", {
                       method: "PUT",
                       headers: {
                         Authorization: `Bearer ${token}`,

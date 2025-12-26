@@ -36,7 +36,7 @@ export default function Savings() {
 
   const fetchBudget = async () => {
     try {
-      const res = await fetch(`https://ai-money-backend.vercel.app/api/budget?month=${month}&year=${year}`, {
+      const res = await fetch(`http://localhost:5000/api/budget?month=${month}&year=${year}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (res.ok) {
@@ -71,7 +71,7 @@ export default function Savings() {
   const handleSave = async () => {
     setSaving(true);
     try {
-      const res = await fetch('https://ai-money-backend.vercel.app/api/budget', {
+      const res = await fetch('http://localhost:5000/api/budget', {
         method: 'PUT',
         headers: { 
           'Authorization': `Bearer ${token}`,
